@@ -13,12 +13,15 @@ describe('Movie', () => {
     '137 мин. / 02:17'
   );
   test('Creates a movie', () => {
-    expect(avengers.title).toBe('The Avengers');
-    expect(avengers.year).toBe(2012);
-    expect(avengers.country).toBe('USA');
-    expect(avengers.slogan).toBe('Avengers Assemble');
-    expect(avengers.genres).toEqual(['фантастика', 'боевик', 'фэнтези', 'приключения']);
-    expect(avengers.duration).toBe('137 мин. / 02:17');
+    const correct = {
+      title: 'The Avengers',
+      year: 2012,
+      country: 'USA',
+      slogan: 'Avengers Assemble',
+      genres: ['фантастика', 'боевик', 'фэнтези', 'приключения'],
+      duration: '137 мин. / 02:17'
+    }
+    expect(avengers).toEqual(correct);
   });
   test('adds a movie to the basket', () => {
     avengers.addToBasket(basket);
